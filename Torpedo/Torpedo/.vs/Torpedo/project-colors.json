@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "38355873-bfc4-4563-8139-e0f9f2598f8b": {
+      "ProjectGuid": "38355873-bfc4-4563-8139-e0f9f2598f8b",
+      "DisplayName": "Torpedo",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
