@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Torpedo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700"  Width="1000" Background="#120458">
+        Title="Torpedó játék" Height="700"  Width="1000" Background="#120458">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -240,6 +240,7 @@
 
         </Grid.RowDefinitions>
 
+        <!--GAME NAME TEXTBLOCK-->
         <TextBlock x:Name="GameName"
                    Foreground="#ff184c"
                    HorizontalAlignment="Center"
@@ -258,6 +259,8 @@
                 <DropShadowEffect/>
             </TextBlock.Effect>
         </TextBlock>
+        
+        <!--PLAYER VS AI BUTTON-->
         <Button Style="{DynamicResource PlayerVsAiStyle}" Grid.Row="1"
                 x:Name="PlayerVsAI"
                 ClickMode="Press"
@@ -272,8 +275,10 @@
                 BorderBrush="#ff00fe"
                 BorderThickness="6,6,6,3"
                 Width="500"
-                Cursor="Hand"
+                Cursor="Hand" Click="PlayerVsAI_Click"
                 />
+        
+        <!--GAME HISTORY BUTTON-->
         <Button Style="{DynamicResource HistoryStyle}"
                 Grid.Row="2"
                 x:Name="GameHistory"
@@ -291,6 +296,8 @@
                 BorderThickness="6"
                 Cursor="Hand"
                 />
+        
+        <!--PLAYER VS PLAYER BUTTON-->
         <Button Style="{DynamicResource PlayerVsPlayerStyle}" Grid.Row="3"
                 x:Name="PlayerVsPlayer"
                 Content="Kétszemélyes mód"
@@ -307,6 +314,8 @@
                 Width="500"
                 Cursor="Hand"
                 />
+        
+        <!--EXIT BUTTON-->
         <Button Style="{DynamicResource ExitGameStyle}" x:Name="button"
                 Content="Kilépés a játékból"
                 HorizontalAlignment="Left"
@@ -322,6 +331,6 @@
                 FontFamily="Bahnschrift Light SemiCondensed"
                 FontSize="20"
                 ClickMode="Press"
-                Cursor="Hand"/>
+                Cursor="Hand" Click="button_Click"/>
     </Grid>
 </Window>

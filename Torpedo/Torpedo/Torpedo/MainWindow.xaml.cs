@@ -24,5 +24,19 @@ namespace Torpedo
         {
             InitializeComponent();
         }
+
+        private void PlayerVsAI_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            PlayerVsAINameInput win2 = new PlayerVsAINameInput();
+            win2.Show();
+            this.Close();
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
     }
 }
