@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Greg\\Documents\\GitHub\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {}
+    "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Greg\\Documents\\GitHub\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {
+    "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Greg\\Documents\\GitHub\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
+        "projectUniqueName": "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
         "projectName": "Torpedo",
-        "projectPath": "C:\\Users\\Greg\\Documents\\GitHub\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
-        "packagesPath": "C:\\Users\\Greg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Greg\\Documents\\GitHub\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\obj\\",
+        "projectPath": "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
+        "packagesPath": "C:\\Users\\gmrob\\.nuget\\packages\\",
+        "outputPath": "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Greg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gmrob\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

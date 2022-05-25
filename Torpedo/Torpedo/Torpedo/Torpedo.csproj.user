@@ -7,10 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="PlayerVsAINameInput.xaml.cs">
+    <Compile Update="View\PlayerVsAINameInput.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="PlayerVsPlayerNameInput.xaml.cs">
+    <Compile Update="View\PlayerVsPlayerNameInput.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -18,10 +18,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="PlayerVsAINameInput.xaml">
+    <Page Update="View\PlayerVsAINameInput.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="PlayerVsPlayerNameInput.xaml">
+    <Page Update="View\PlayerVsPlayerNameInput.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
