@@ -28,14 +28,14 @@ namespace Torpedo
         private void PlayerVsAI_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new MainWindow();
-            PlayerVsAINameInput win2 = new PlayerVsAINameInput();
+            View.PlayerVsAINameInput win2 = new View.PlayerVsAINameInput();
             win2.Show();
             this.Close();
 
         }
         private void PlayerVsPlayer_Click(object sender, RoutedEventArgs e)
         {
-            PlayerVsPlayerNameInput pvp = new PlayerVsPlayerNameInput();
+            View.PlayerVsPlayerNameInput pvp = new View.PlayerVsPlayerNameInput();
             pvp.Show();
             this.Close();
         }

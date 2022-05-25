@@ -15,25 +15,18 @@ using System.Windows.Shapes;
 namespace Torpedo.View
 {
     /// <summary>
-    /// Interaction logic for PlayerVsAINameInput.xaml
+    /// Interaction logic for Game.xaml
     /// </summary>
-    public partial class PlayerVsAINameInput : Window
+    public partial class Game : Window
     {
-        public PlayerVsAINameInput()
+        public Game()
         {
             InitializeComponent();
         }
-
-        private void BackButtonPvAInput_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mw = new MainWindow();
-            mw.Show();
-            this.Close();
-        }
-
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        private void ExitFromGameButton_Click(object sender, RoutedEventArgs e)
         {
             System.Environment.Exit(0);
+
         }
     }
 }

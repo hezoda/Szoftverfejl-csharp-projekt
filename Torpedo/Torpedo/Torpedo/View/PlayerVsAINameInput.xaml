@@ -1,9 +1,9 @@
-﻿<Window x:Class="Torpedo.PlayerVsAINameInput"
+﻿<Window x:Class="Torpedo.View.PlayerVsAINameInput"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Torpedo"
+        xmlns:local="clr-namespace:Torpedo.View"
         mc:Ignorable="d"
         Title="Torpedó játék - Egyszemélyes mód regisztráció" Height="700" Width="1000" Background="#120458">
     <Window.Resources>
@@ -278,7 +278,8 @@
                 />
 
         <!--BACK BUTTON-->
-        <Button Style="{DynamicResource BackButtonStyle}" x:Name="BackButtonPvAInput"
+        <Button Style="{DynamicResource BackButtonStyle}"
+                x:Name="BackButtonPvAInput"
                 Content="Vissza"
                 HorizontalAlignment="Left"
                 Margin="49,3,0,0"
@@ -292,7 +293,10 @@
                 BorderThickness="3"
                 FontFamily="Bahnschrift Light SemiCondensed"
                 FontSize="23"
-                RenderTransformOrigin="0.457,-0.156" Height="49" Width="97" Click="BackButtonPvAInput_Click"
+                RenderTransformOrigin="0.457,-0.156"
+                Height="49"
+                Width="97"
+                Click="BackButtonPvAInput_Click"
                 />
     </Grid>
 </Window>

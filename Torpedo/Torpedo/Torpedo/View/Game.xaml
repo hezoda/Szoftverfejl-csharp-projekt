@@ -1,0 +1,152 @@
+﻿<Window x:Class="Torpedo.View.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Torpedo.View"
+        mc:Ignorable="d"
+        Title="Torpedó játék" Height="700" Width="1000" Background="#120458">
+    <Window.Resources>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <ControlTemplate x:Key="ExitGameStyle" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="true">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="#ff577d"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#defe47"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property="Background" TargetName="border" Value="#ff575a"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#defe47"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--EREDMÉNYJELZŐ-->
+        <TextBlock x:Name="ScoreBoard"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap"
+                   FontFamily="Bahnschrift Light SemiCondensed"
+                   Text="&#x0a;Eredményjelző"
+                   FontSize="19"
+                   TextAlignment="Center"
+                   Background="#ff00fe"
+                   Foreground="#d1f7ff"
+                   VerticalAlignment="Center"
+                   Height="137"
+                   Width="1000"
+                   />
+
+        <!--1ST PLAYER POINTS-->
+        <Border BorderBrush="#defe47" BorderThickness="7">
+            <Label x:Name="FirstPlayerPoints"
+                   FontSize="14"
+                FontFamily="Bahnschrift Light SemiCondensed"
+                Content="1. játékos találata: 0"
+                Margin="32,40,807,46"
+                BorderBrush="#08deea"
+                Background="#0016ee"
+                Foreground="#c4fffe"
+                BorderThickness="3"/>
+        </Border>
+
+        <!--1ST PLAYER ROUNDS-->
+        <Label x:Name="FirstPlayerRounds"
+               Content="1. játékos köreinek száma: 0"
+               HorizontalAlignment="Left"
+               Background="#0016ee"
+               FontFamily="Bahnschrift Light SemiCondensed"
+               FontSize="14"
+               Foreground="#c4fffe"
+               Margin="39,88,0,0"
+               VerticalAlignment="Top"
+               Width="180"
+               BorderBrush="#08deea"
+               BorderThickness="3"
+               Height="32"/>
+
+
+        <!--EXIT BUTTON-->
+        <Button Template="{DynamicResource ExitGameStyle}"
+                x:Name="ExitFromGameButton"
+                Content="Kilépés a játékból"
+                HorizontalAlignment="Left"
+                Margin="53,57,0,0"
+                Grid.Row="3"
+                VerticalAlignment="Top"
+                Height="41"
+                Width="178"
+                Background="#ff00fe"
+                Foreground="#d1f7ff"
+                BorderBrush="#defe47"
+                BorderThickness="3"
+                FontFamily="Bahnschrift Light SemiCondensed"
+                FontSize="20"
+                ClickMode="Press"
+                Cursor="Hand"
+                RenderTransformOrigin="0.596,0.485"
+                Click="ExitFromGameButton_Click"/>
+
+        <!--2ND PLAYER SCORE-->
+        <Label x:Name="SecondPlayerPoints"
+               Content="2. játékos találata: 0"
+               HorizontalAlignment="Left"
+               Background="#0016ee"
+               FontFamily="Bahnschrift Light SemiCondensed"
+               FontSize="14"
+               Foreground="#c4fffe"
+               Margin="818,47,0,0"
+               BorderBrush="#08deea"
+               BorderThickness="3"
+               VerticalAlignment="Top"
+               RenderTransformOrigin="12.873,-6.601"
+               Height="32"
+               Width="147"/>
+        <Label x:Name="SecondPlayerRounds"
+               Content="2. játékos köreinek száma: 0"
+               HorizontalAlignment="Left"
+               Margin="785,88,0,0"
+               Grid.Row="0" 
+               Background="#0016ee"
+               FontFamily="Bahnschrift Light SemiCondensed"
+               FontSize="14"
+               Foreground="#c4fffe"
+               VerticalAlignment="Top"
+               BorderBrush="#08deea"
+               BorderThickness="3" Width="180" Height="32"/>
+
+        <Label x:Name="VS"
+               Content="VS"
+               FontFamily="Bahnschrift Light SemiCondensed"
+               FontSize="60"
+               Foreground="#c4fffe"
+               HorizontalAlignment="Center"
+               Margin="0,55,0,0"
+               Grid.Row="0"
+               VerticalAlignment="Top" RenderTransformOrigin="0.913,0.425" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
