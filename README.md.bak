@@ -11,8 +11,7 @@ A Torpedó kétszemélyes stratégiai táblajáték.  A győzelemhez ki kell lő
 ### Keretrendszer:
     .NET-es grafikus (WPF keretrendszerben írt) játék.
 	
-###Hibakódok:
-- 0 : Kilépés gombbal sikeresen leállt a program.
+###H
 
 ### Linkek:
 https://github.com/hezoda/Szoftverfejl-csharp-projekt

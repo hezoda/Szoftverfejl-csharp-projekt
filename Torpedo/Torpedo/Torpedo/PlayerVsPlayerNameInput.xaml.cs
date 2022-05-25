@@ -10,37 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Torpedo
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PlayerVsPlayerNameInput.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PlayerVsPlayerNameInput : Window
     {
-        public MainWindow()
+        public PlayerVsPlayerNameInput()
         {
             InitializeComponent();
         }
 
-        private void PlayerVsAI_Click(object sender, RoutedEventArgs e)
+        private void BackButtonPvAInput_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new MainWindow();
-            PlayerVsAINameInput win2 = new PlayerVsAINameInput();
-            win2.Show();
-            this.Close();
-
-        }
-        private void PlayerVsPlayer_Click(object sender, RoutedEventArgs e)
-        {
-            PlayerVsPlayerNameInput pvp = new PlayerVsPlayerNameInput();
-            pvp.Show();
+            mw.Show();
             this.Close();
         }
 
-        private void ExitGame_Click(object sender, RoutedEventArgs e)
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             System.Environment.Exit(0);
         }

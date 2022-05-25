@@ -21,3 +21,5 @@ C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpe
 C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\Torpedo.genruntimeconfig.cache
 C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\PlayerVsAINameInput.g.cs
 C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\PlayerVsAINameInput.baml
+C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\PlayerVsPlayerNameInput.g.cs
+C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\PlayerVsPlayerNameInput.baml
