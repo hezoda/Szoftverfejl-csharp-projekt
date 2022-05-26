@@ -274,7 +274,7 @@
                 ClickMode="Press"
                 Width="229"
                 Margin="718,223,0,0"
-                Cursor="Hand" Grid.RowSpan="2"
+                Cursor="Hand" Grid.RowSpan="2" Click="button1_Click"
                 />
 
         <!--BACK BUTTON-->

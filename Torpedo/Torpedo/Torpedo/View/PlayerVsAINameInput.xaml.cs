@@ -35,5 +35,12 @@ namespace Torpedo.View
         {
             System.Environment.Exit(0);
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Game ng = new Game();
+            ng.Show();
+            this.Close();
+        }
     }
 }

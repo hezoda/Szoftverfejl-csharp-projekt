@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Torpedo.View"
         mc:Ignorable="d"
-        Title="Torpedó játék" Height="700" Width="1000" Background="#120458">
+        Title="Torpedó játék" Height="780" Width="1060" Background="#120458">
     <Window.Resources>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
@@ -37,6 +37,61 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background1" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border1" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background1" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border1" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background1" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border1" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground1" Color="#FF838383"/>
+        <Style x:Key="OkButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="28" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" Margin="-13,0,0,-14">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border1}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border1}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground1}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -57,7 +112,7 @@
                    Foreground="#d1f7ff"
                    VerticalAlignment="Center"
                    Height="137"
-                   Width="1000"
+                   Width="1060"
                    />
 
         <!--1ST PLAYER POINTS-->
@@ -66,7 +121,7 @@
                    FontSize="14"
                 FontFamily="Bahnschrift Light SemiCondensed"
                 Content="1. játékos találata: 0"
-                Margin="32,40,807,46"
+                Margin="32,42,874,61"
                 BorderBrush="#08deea"
                 Background="#0016ee"
                 Foreground="#c4fffe"
@@ -94,8 +149,8 @@
                 x:Name="ExitFromGameButton"
                 Content="Kilépés a játékból"
                 HorizontalAlignment="Left"
-                Margin="53,57,0,0"
-                Grid.Row="3"
+                Margin="10,73,0,0"
+                Grid.Row="2"
                 VerticalAlignment="Top"
                 Height="41"
                 Width="178"
@@ -147,6 +202,42 @@
                Margin="0,55,0,0"
                Grid.Row="0"
                VerticalAlignment="Top" RenderTransformOrigin="0.913,0.425" Grid.RowSpan="2"/>
+        <Button Style="{DynamicResource OkButtonStyle}" x:Name="OkButton"
+                Content="OK"
+                HorizontalAlignment="Left"
+                Grid.Row="2"
+                Background="#ff00fe"
+                BorderBrush="#defe47"
+                Foreground="#d1f7ff"
+                BorderThickness="3"
+                VerticalAlignment="Top" Height="41" Width="122"
+                FontFamily="Bahnschrift Light SemiCondensed"
+                FontSize="30" Margin="39,10,0,0"
+                 />
+        <Button x:Name="AttackA" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Content="A" Margin="213,10,737,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackB" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Content="B" Margin="274,10,676,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackC" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Content="C" Margin="335,10,615,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackD" Content="D" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="396,10,554,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackE" Content="E" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="458,10,492,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackF" Content="F" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="519,10,431,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackG" Content="G" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="581,10,369,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackH" Content="H" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="641,10,309,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackI" Content="I" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="703,10,247,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack1" Content="1" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="213,69,737,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="AttackJ" Content="J" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="765,10,185,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack2" Content="2" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="274,69,676,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack3" Content="3" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="335,69,615,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack4" Content="4" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="396,70,554,17" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack5" Content="5" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="458,69,492,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack6" Content="6" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="519,69,431,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack7" Content="7" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="581,69,369,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack8" Content="8" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="641,69,309,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack9" Content="9" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="703,69,247,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <Button x:Name="Attack10" Content="10" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="785,75,205,24" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
+        <TextBox x:Name="Letters" HorizontalAlignment="Left" Background="#defe47" Foreground="#0016ee" FontFamily="Bahnschrift Light SemiCondensed" TextAlignment="Center" FontSize="43" Margin="892,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="50" Height="50"/>
+        <TextBox x:Name="Numbers" HorizontalAlignment="Left" Background="#defe47" Foreground="#0016ee" FontFamily="Bahnschrift Light SemiCondensed" TextAlignment="Center" FontSize="43" Margin="962,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="50" Height="50"/>
+        <Label x:Name="LettersLabel" Content="A-J" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#defe47" FontSize="20" HorizontalAlignment="Left" Margin="898,17,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label x:Name="NumbersLabel" Content="1-10" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#defe47" FontSize="20" HorizontalAlignment="Left" Margin="967,17,0,0" Grid.Row="2" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
