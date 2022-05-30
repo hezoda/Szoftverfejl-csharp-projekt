@@ -11,8 +11,15 @@ A Torpedó kétszemélyes stratégiai táblajáték.  A győzelemhez ki kell lő
 ### Keretrendszer:
     .NET-es grafikus (WPF keretrendszerben írt) játék.
 	
-###Hibakódok:
+### Hibakódok:
 - 0 : Kilépés gombbal sikeresen leállt a program.
+
+### Hajók típusai:
+- 5 mező hosszúságú (Carrier)
+- 4 mező hosszúságú (Battleship)
+- 3 mező hosszúságú (Cruiser)
+- 3 mező hosszúságú (Submarine)
+- 2 mező hosszúságú (Destroyer)
 
 ### Linkek:
 https://github.com/hezoda/Szoftverfejl-csharp-projekt

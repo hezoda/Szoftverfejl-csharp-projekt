@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Torpedo
+namespace Torpedo.View
 {
     /// <summary>
     /// Interaction logic for PlayerVsAINameInput.xaml
@@ -34,6 +34,13 @@ namespace Torpedo
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             System.Environment.Exit(0);
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Game ng = new Game();
+            ng.Show();
+            this.Close();
         }
     }
 }
