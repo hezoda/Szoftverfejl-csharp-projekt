@@ -8,10 +8,10 @@ namespace Torpedo.Model
 {
     public class Position
     {
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        public double X { get; private set; }
+        public double Y { get; private set; }
 
-        public Position(int x, int y)
+        public Position(double x, double y)
         {
             this.X = x;
             this.Y = y;

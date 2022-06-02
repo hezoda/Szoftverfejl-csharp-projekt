@@ -38,7 +38,7 @@ namespace Torpedo.View
 
         private void GameStart_Click(object sender, RoutedEventArgs e)
         {
-            View.Game ng = new View.Game();
+            PlaceShip ng = new PlaceShip();
             ng.Show();
             this.Close();
         }

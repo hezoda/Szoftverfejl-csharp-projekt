@@ -4,13 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Torpedo.View"
-        xmlns:viewModel="clr-namespace:Torpedo.ViewModel.BattleField"
         xmlns:view="clr-namespace:Torpedo.View"
         mc:Ignorable="d"
         Title="Torpedó játék" Height="780" Width="1060" Background="#120458">
-    <Window.DataContext>
-        <viewModel:BattleFieldViewModel/>
-    </Window.DataContext>
     <Window.Resources>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
@@ -197,67 +193,63 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <TextBlock Text="Játékos mezője" Grid.Row="0"/>
-                <Grid Grid.Row="1">
-                    <ItemsControl ItemsSource="{Binding Positions}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="1" Background="#656565">
-                                    <Grid Grid.Row="0">
-                                        <Button>
-                                            <Button.Resources>
-                                                <Style TargetType="Button">
-                                                    <Setter Property="Background" Value="Transparent" />
-                                                    <Setter Property="Template">
-                                                        <Setter.Value>
-                                                            <ControlTemplate TargetType="Button">
-                                                                <Border BorderBrush="White" Background="{TemplateBinding Background}" BorderThickness="1">
-                                                                    <ContentPresenter />
-                                                                </Border>
-                                                                <ControlTemplate.Triggers>
-                                                                    <Trigger Property="IsEnabled" Value="False">
-                                                                        <Setter Property="Opacity" Value="0.5" />
-                                                                    </Trigger>
-                                                                </ControlTemplate.Triggers>
-                                                            </ControlTemplate>
-                                                        </Setter.Value>
-                                                    </Setter>
-                                                    <!--style triggers-->
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding FakeShipUnit}" Value="True">
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding Enabled}" Value="False">
-                                                            <Setter Property="IsEnabled" Value="False" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding State}">
-                                                            <Setter Property="Background" Value="Red" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding State}">
-                                                            <Setter Property="Background" Value="White" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding HighlightedState}">
-                                                            <Setter Property="Background" Value="White" />
-                                                            <Setter Property="Opacity" Value="0.3" />
-                                                        </DataTrigger>
-                                                        <DataTrigger Binding="{Binding HighlightedState}">
-                                                            <Setter Property="Background" Value="Red" />
-                                                            <Setter Property="Opacity" Value="0.5" />
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </Button.Resources>
-                                        </Button>
-                                    </Grid>
-                                </Grid>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <UniformGrid Rows="{Binding Rows}" Columns="{Binding Columns}" />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                    </ItemsControl>
 
+                <Grid Height="400" Width="400" Name="userBattleField" Grid.Row="1" Grid.Column="1" Background="Transparent" ShowGridLines="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
                 </Grid>
+               
+
+            </Grid>
+            <Grid Height="400" Width="400" Name="rightTable" Grid.Row="1" Grid.Column="2" Background="Transparent" ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
@@ -293,32 +285,7 @@
                 BorderThickness="3"
                 VerticalAlignment="Top" Height="41" Width="122"
                 FontFamily="Bahnschrift Light SemiCondensed"
-                FontSize="30" Margin="39,10,0,0"
-                 />
-            <Button x:Name="AttackA" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Content="A" Margin="213,10,737,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackB" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Content="B" Margin="274,10,676,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackC" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Content="C" Margin="335,10,615,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackD" Content="D" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="396,10,554,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackE" Content="E" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="458,10,492,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackF" Content="F" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="519,10,431,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackG" Content="G" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="581,10,369,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackH" Content="H" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="641,10,309,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackI" Content="I" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="703,10,247,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack1" Content="1" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="213,69,737,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="AttackJ" Content="J" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="765,10,185,77" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack2" Content="2" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="274,69,676,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack3" Content="3" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="335,69,615,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack4" Content="4" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="396,70,554,17" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack5" Content="5" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="458,69,492,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack6" Content="6" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="519,69,431,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack7" Content="7" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="581,69,369,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack8" Content="8" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="641,69,309,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack9" Content="9" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="703,69,247,18" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <Button x:Name="Attack10" Content="10" Background="#defe47" Foreground="#0016ee" ClickMode="Press" Cursor="Hand" BorderBrush="#00b3fe" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16" BorderThickness="3" Margin="785,75,205,24" Grid.Row="2" Width="50" Height="50" RenderTransformOrigin="0.357,0.658"/>
-            <TextBox x:Name="Letters" HorizontalAlignment="Left" Background="#defe47" Foreground="#0016ee" FontFamily="Bahnschrift Light SemiCondensed" TextAlignment="Center" FontSize="43" Margin="892,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="50" Height="50"/>
-            <TextBox x:Name="Numbers" HorizontalAlignment="Left" Background="#defe47" Foreground="#0016ee" FontFamily="Bahnschrift Light SemiCondensed" TextAlignment="Center" FontSize="43" Margin="962,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="50" Height="50"/>
-            <Label x:Name="LettersLabel" Content="A-J" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#defe47" FontSize="20" HorizontalAlignment="Left" Margin="898,17,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-            <Label x:Name="NumbersLabel" Content="1-10" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#defe47" FontSize="20" HorizontalAlignment="Left" Margin="967,17,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+                FontSize="30" Margin="39,10,0,0" Click="OkButton_Click"/>
         </Grid>
 
 

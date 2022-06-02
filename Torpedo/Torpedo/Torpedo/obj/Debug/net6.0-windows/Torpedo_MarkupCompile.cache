@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\App.xaml
-4128562994
+51639330074
 
-21195094238
+82102929586
 1952133472048
-MainWindow.xaml;View\Game.xaml;View\PlayerVsAINameInput.xaml;View\PlayerVsPlayerNameInput.xaml;
+MainWindow.xaml;View\Game.xaml;View\PlaceShip.xaml;View\PlayerVsAINameInput.xaml;View\PlayerVsPlayerNameInput.xaml;
 
 False
 
