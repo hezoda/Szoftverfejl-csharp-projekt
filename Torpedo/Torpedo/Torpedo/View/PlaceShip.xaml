@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Torpedo"
         mc:Ignorable="d"
-        Title="PlaceShip" Height="749" Width="807" Background="#120458"
+        ResizeMode="NoResize"
+        Title="Torpedó - Hajók elhelyezése" Height="749" Width="807" Background="#120458"
         KeyDown="Window_KeyDown">
     <Grid>
         <Grid.RowDefinitions>
