@@ -40,9 +40,7 @@ D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\o
 D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\Torpedo.pdb
 D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\Torpedo.genruntimeconfig.cache
 D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\ref\Torpedo.dll
-D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\View\PlayerVsAINameInput.g.cs
 D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\View\PlayerVsPlayerNameInput.g.cs
-D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\View\PlayerVsAINameInput.baml
 D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\View\PlayerVsPlayerNameInput.baml
 C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\View\PlayerVsAINameInput.g.cs
 C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\View\PlayerVsPlayerNameInput.g.cs

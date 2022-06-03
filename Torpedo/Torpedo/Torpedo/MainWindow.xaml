@@ -262,23 +262,7 @@
         </TextBlock>
         
         <!--PLAYER VS AI BUTTON-->
-        <Button Style="{DynamicResource PlayerVsAiStyle}" Grid.Row="1"
-                x:Name="PlayerVsAI"
-                ClickMode="Press"
-                FontFamily="Bahnschrift Light SemiCondensed"
-                Background="#defe47"
-                Foreground="#0016ee"
-                Content="Egyszemélyes mód"
-                FontSize="45"
-                HorizontalAlignment="Center" 
-                VerticalAlignment="Center"
-                Height="130"
-                BorderBrush="#ff00fe"
-                BorderThickness="6,6,6,3"
-                Width="500"
-                Cursor="Hand" Click="PlayerVsAI_Click"
-                />
-        
+
         <!--GAME HISTORY BUTTON-->
         <Button Style="{DynamicResource HistoryStyle}"
                 Grid.Row="2"

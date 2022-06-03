@@ -38,7 +38,7 @@
 
 
 
-        <Grid Height="400" Width="400" Grid.Row="1" Grid.Column="1" Name="userBattleField" Margin="20,0,20,0" Background="Transparent"  PreviewMouseLeftButtonDown="onGridMouseClick" ShowGridLines="True">
+        <Grid Height="400" Width="400" Grid.Row="1" Grid.Column="1" Name="userBattleField" Margin="20,0,20,0" Background="Transparent"  PreviewMouseLeftButtonDown="OnGridMouseClick" ShowGridLines="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -76,14 +76,14 @@
             HorizontalContentAlignment="Left"
             HorizontalAlignment="Left" Width="218" Height="105" Margin="51,10,0,0" Grid.RowSpan="2"/>
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="20">
-            <Button x:Name="carrierBtn" FontSize="18" Content="Carrier" FontFamily="Bahnschrift Light SemiCondensed" Background="#ff00fe" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Click="shipBtn" HorizontalContentAlignment="Center" Height="50.4" Width="170" Cursor="Hand" Margin="20"/>
-            <Button x:Name="battleshipBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Battleship" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
-            <Button x:Name="cruiserBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Cruiser" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
-            <Button x:Name="submarineBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Submarine" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
-            <Button x:Name="destroyerBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Destroyer" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="53" Padding="0,0,0,0" Cursor="Hand" Margin="20"/>
+            <Button x:Name="carrierBtn" FontSize="18" Content="Carrier" FontFamily="Bahnschrift Light SemiCondensed" Background="#ff00fe" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Click="ShipGroupButton" HorizontalContentAlignment="Center" Height="50.4" Width="170" Cursor="Hand" Margin="20"/>
+            <Button x:Name="battleShipGroupButton" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Battleship" Click="ShipGroupButton" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
+            <Button x:Name="cruiserBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Cruiser" Click="ShipGroupButton" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
+            <Button x:Name="submarineBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Submarine" Click="ShipGroupButton" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
+            <Button x:Name="destroyerBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Destroyer" Click="ShipGroupButton" HorizontalContentAlignment="Center" Width="170" Height="53" Padding="0,0,0,0" Cursor="Hand" Margin="20"/>
         </StackPanel>
-        <Button x:Name="SubmitBtn" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="OkButton_Click" Content="Start" Grid.Column="1" BorderThickness="4" Margin="319,18,69,27" Grid.Row="2" Cursor="Hand" />
-        <Button x:Name="ResetBtn" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="resetBtn_Click" Content="Táblát töröl" BorderThickness="4" Margin="69,18,319,27" Grid.Row="2" RenderTransformOrigin="0.385,0.829" Grid.Column="1" Cursor="Hand" />
-        <Button x:Name="BackBtnPlaceShip" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="backBtnClick" Content="Vissza" BorderThickness="4" Margin="78,26,84,35" Grid.Row="2" RenderTransformOrigin="0.385,0.829" Cursor="Hand" />
+        <Button x:Name="SubmitBtn" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="OkButtonClick" Content="Start" Grid.Column="1" BorderThickness="4" Margin="319,18,69,27" Grid.Row="2" Cursor="Hand" />
+        <Button x:Name="ResetBtn" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="ResetButtonClick" Content="Táblát töröl" BorderThickness="4" Margin="69,18,319,27" Grid.Row="2" RenderTransformOrigin="0.385,0.829" Grid.Column="1" Cursor="Hand" />
+        <Button x:Name="BackBtnPlaceShip" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="BackButtonClick" Content="Vissza" BorderThickness="4" Margin="78,26,84,35" Grid.Row="2" RenderTransformOrigin="0.385,0.829" Cursor="Hand" />
     </Grid>
 </Window>
