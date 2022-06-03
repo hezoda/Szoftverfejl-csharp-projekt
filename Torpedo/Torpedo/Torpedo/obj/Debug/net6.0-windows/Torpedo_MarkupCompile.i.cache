@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\
+C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\obj\Debug\net6.0-windows\
 Torpedo
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\Programozás\C#\Projekt\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\App.xaml
+C:\Users\Greg\Documents\GitHub\Szoftverfejl-csharp-projekt\Torpedo\Torpedo\Torpedo\App.xaml
 51639330074
 
 101001003374
-1952133472048
+1951959645108
 MainWindow.xaml;View\Game.xaml;View\PlaceShip.xaml;View\PlayerVsAINameInput.xaml;View\PlayerVsPlayerNameInput.xaml;
 
-False
+True
 

@@ -36,7 +36,7 @@ namespace Torpedo.View
 
         private void ExitFromGameButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            System.Environment.Exit(0);
         }
     }
 }

@@ -298,5 +298,6 @@
                 Width="97"
                 Click="BackButtonPvAInput_Click"
                 />
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="302,87,0,0" Grid.Row="2" VerticalAlignment="Top"/>
     </Grid>
 </Window>

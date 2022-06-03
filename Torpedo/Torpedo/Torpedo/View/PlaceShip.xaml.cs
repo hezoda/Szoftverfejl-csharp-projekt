@@ -363,5 +363,10 @@ namespace Torpedo
         {
             //TODO
         }
+
+        private void backBtnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

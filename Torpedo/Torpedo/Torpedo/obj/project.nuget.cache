@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3iNrnE55I6qpZ1cIO1mvTUrrktXD8NYYuBJu/PTj2T8ipacsJMGWvGoFEnn5BYkgapKMcLtiLAtuxpka9Jg2qA==",
+  "dgSpecHash": "h+Y/V6k5cXKtHHg6xdoQGs+INdKZnPr+G9sDaPghqNfDLgIgj3VAnHZU6Xc+jDvIzTvNz442mtMPdgaKMTGoqA==",
   "success": true,
-  "projectFilePath": "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
+  "projectFilePath": "C:\\Users\\Greg\\Documents\\GitHub\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gmrob\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512"
+    "C:\\Users\\Greg\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512"
   ],
   "logs": []
 }

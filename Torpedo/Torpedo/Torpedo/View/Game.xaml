@@ -192,7 +192,6 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="Játékos mezője" Grid.Row="0"/>
 
                 <Grid Height="400" Width="400" Name="userBattleField" Grid.Row="1" Grid.Column="1" Background="Transparent" ShowGridLines="True">
                     <Grid.ColumnDefinitions>
@@ -220,8 +219,9 @@
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
+                    <Border BorderBrush="#ff00fe" BorderThickness="3" Background="#defe47" Grid.ColumnSpan="10" Grid.RowSpan="10"></Border>
                 </Grid>
-               
+
 
             </Grid>
             <Grid Height="400" Width="400" Name="rightTable" Grid.Row="1" Grid.Column="2" Background="Transparent" ShowGridLines="True">
@@ -250,6 +250,7 @@
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
+                <Border BorderBrush="#ff00fe" BorderThickness="3" Background="#defe47" Grid.ColumnSpan="10" Grid.RowSpan="10"></Border>
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
@@ -258,8 +259,7 @@
                 x:Name="ExitFromGameButton"
                 Content="Kilépés a játékból"
                 HorizontalAlignment="Left"
-                Margin="10,73,0,0"
-                Grid.Row="2"
+                Margin="63,57,0,0"
                 VerticalAlignment="Top"
                 Height="41"
                 Width="178"
@@ -278,14 +278,13 @@
             <Button Style="{DynamicResource OkButtonStyle}" x:Name="OkButton"
                 Content="OK"
                 HorizontalAlignment="Left"
-                Grid.Row="2"
                 Background="#ff00fe"
                 BorderBrush="#defe47"
                 Foreground="#d1f7ff"
                 BorderThickness="3"
                 VerticalAlignment="Top" Height="41" Width="122"
                 FontFamily="Bahnschrift Light SemiCondensed"
-                FontSize="30" Margin="39,10,0,0" Click="OkButton_Click"/>
+                FontSize="30" Margin="848,57,0,0" Click="OkButton_Click"/>
         </Grid>
 
 
