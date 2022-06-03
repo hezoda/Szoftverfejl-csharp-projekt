@@ -117,7 +117,7 @@ namespace Torpedo.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Torpedo;V1.0.0.0;component/view/playervsainameinput.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Torpedo;component/view/playervsainameinput.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\PlayerVsAINameInput.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
