@@ -32,6 +32,7 @@
         <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
 
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal"/>
+        <Canvas Width="400" Height="400" Background="#defe47" Grid.Column="1" Margin="64,54,74,69" Grid.Row="1" />
 
 
 
@@ -62,8 +63,8 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Border BorderBrush="#ff00fe" BorderThickness="3" Background="#defe47" Grid.ColumnSpan="10" Grid.RowSpan="10"></Border>
         </Grid>
+
         <Label x:Name="gameName"
             Content="Carrier: 5 mező&#x0a;Battleship: 4 mező&#x0a;Cruiser: 3 mező&#x0a;Submarine: 2 mező&#x0a;Destroyer: 1 mező"
             VerticalAlignment="Top"
