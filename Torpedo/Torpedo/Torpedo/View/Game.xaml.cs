@@ -15,9 +15,6 @@ using Torpedo.Model;
 
 namespace Torpedo.View
 {
-    /// <summary>
-    /// Interaction logic for Game.xaml
-    /// </summary>
     public partial class Game : Window
     {
        
