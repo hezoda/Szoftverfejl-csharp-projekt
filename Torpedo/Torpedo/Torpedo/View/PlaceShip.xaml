@@ -20,10 +20,10 @@
         </Grid.ColumnDefinitions>
 
         <Label x:Name="welcomeLabel"
-               Content="Rakd le az összes hajót &#x0a;és nyomd meg a Start gombot a kezdéshez."
+               Content="Rakd le az összes hajót&#x0a;(nyomd meg a Space gombot lerakás előtt a forgatáshoz) &#x0a;és nyomd meg a Start gombot a kezdéshez."
                VerticalAlignment="Center"
                FontFamily="Bahnschrift Light SemiCondensed"
-               FontSize="27"
+               FontSize="21"
                VerticalContentAlignment="Center"
                HorizontalContentAlignment="Center"
                Foreground="#ff184c"
@@ -65,20 +65,20 @@
             <Border BorderBrush="#ff00fe" BorderThickness="3" Background="#defe47" Grid.ColumnSpan="10" Grid.RowSpan="10"></Border>
         </Grid>
         <Label x:Name="gameName"
-            Content="TORPEDÓ HAJÓK &#x0a; ELHELYEZÉSE"
-            VerticalAlignment="Center"
+            Content="Carrier: 5 mező&#x0a;Battleship: 4 mező&#x0a;Cruiser: 3 mező&#x0a;Submarine: 2 mező&#x0a;Destroyer: 1 mező"
+            VerticalAlignment="Top"
             FontFamily="Bahnschrift Light SemiCondensed"
-            FontSize="27"
+            FontSize="15"
             Foreground="#ff184c"
             VerticalContentAlignment="Center"
-            HorizontalContentAlignment="Center"
-            HorizontalAlignment="Left" Width="259" Height="85" Margin="10,0,0,0"/>
-        <StackPanel Grid.Column="0" Grid.Row="1">
-            <Button x:Name="carrierBtn" FontSize="18" Content="Carrier (5 mező)" FontFamily="Bahnschrift Light SemiCondensed" Background="#ff00fe" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Click="shipBtn" HorizontalContentAlignment="Center" Height="50.4" Width="170" Cursor="Hand"/>
-            <Button x:Name="battleshipBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Battleship (4 mező)" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" />
-            <Button x:Name="cruiserBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Cruiser (3 mező)" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" />
-            <Button x:Name="submarineBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Submarine (3 mező)" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" />
-            <Button x:Name="destroyerBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Destroyer (2 mező)" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="53" Padding="0,0,0,0" Cursor="Hand"/>
+            HorizontalContentAlignment="Left"
+            HorizontalAlignment="Left" Width="218" Height="105" Margin="51,10,0,0" Grid.RowSpan="2"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="20">
+            <Button x:Name="carrierBtn" FontSize="18" Content="Carrier" FontFamily="Bahnschrift Light SemiCondensed" Background="#ff00fe" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Click="shipBtn" HorizontalContentAlignment="Center" Height="50.4" Width="170" Cursor="Hand" Margin="20"/>
+            <Button x:Name="battleshipBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Battleship" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
+            <Button x:Name="cruiserBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Cruiser" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
+            <Button x:Name="submarineBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Submarine" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="50" Cursor="Hand" Margin="20"/>
+            <Button x:Name="destroyerBtn" FontSize="18" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" BorderThickness="3" Content="Destroyer" Click="shipBtn" HorizontalContentAlignment="Center" Width="170" Height="53" Padding="0,0,0,0" Cursor="Hand" Margin="20"/>
         </StackPanel>
         <Button x:Name="SubmitBtn" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="OkButton_Click" Content="Start" Grid.Column="1" BorderThickness="4" Margin="319,18,69,27" Grid.Row="2" Cursor="Hand" />
         <Button x:Name="ResetBtn" FontSize="24" Background="#ff00fe" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#d1f7ff" BorderBrush="#defe47" Click="resetBtn_Click" Content="Táblát töröl" BorderThickness="4" Margin="69,18,319,27" Grid.Row="2" RenderTransformOrigin="0.385,0.829" Grid.Column="1" Cursor="Hand" />
