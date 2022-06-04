@@ -36,5 +36,12 @@ namespace Torpedo
         {
             System.Environment.Exit(0);
         }
+
+        private void GameHistory_Click(object sender, RoutedEventArgs e)
+        {
+            Scoreboard sc = new Scoreboard();
+            sc.Show();
+            this.Close();
+        }
     }
 }

@@ -219,7 +219,11 @@
                 FontFamily="Bahnschrift Light SemiCondensed"
                 FontSize="20"
                 ClickMode="Press"
-                Cursor="Hand" RenderTransformOrigin="0.596,0.485" Click="ExitButton_Click"/>
+                Cursor="Hand" RenderTransformOrigin="0.596,0.485" Click="ExitButton_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
         <!--JÁTÉK SZABÁLYZAT-->
         <TextBlock x:Name="HowGameWorks"
@@ -276,7 +280,11 @@
                 Width="229"
                 Margin="718,223,0,0"
                 Cursor="Hand" Grid.RowSpan="2" Click="GameStart_Click"
-                />
+                >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
 
         <!--BACK BUTTON-->
         <Button Style="{DynamicResource BackButtonStyle}"
@@ -295,8 +303,12 @@
                 FontFamily="Bahnschrift Light SemiCondensed"
                 FontSize="23"
                 RenderTransformOrigin="0.457,-0.156" Height="49" Width="97" Click="BackButtonPvAInput_Click"
-                />
-    
+                >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
         <!--2ND PLAYER NAME TEXTBLOCK-->
         <TextBlock x:Name="SecondPlayerNameTextBlock"
             HorizontalAlignment="Left"

@@ -16,6 +16,9 @@
     <Compile Update="View\PlayerVsPlayerNameInput.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Scoreboard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PlayerVsPlayerNameInput.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Scoreboard.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -236,7 +236,6 @@
             <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
-            <RowDefinition Height="3*"></RowDefinition>
             <RowDefinition Height="1.5*"></RowDefinition>
 
         </Grid.RowDefinitions>
@@ -260,7 +259,7 @@
                 <DropShadowEffect/>
             </TextBlock.Effect>
         </TextBlock>
-        
+
         <!--PLAYER VS AI BUTTON-->
 
         <!--GAME HISTORY BUTTON-->
@@ -279,11 +278,15 @@
                 Width="500"
                 BorderBrush="#defe47"
                 BorderThickness="6"
-                Cursor="Hand"
-                />
-        
+                Cursor="Hand" Click="GameHistory_Click"
+                >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
         <!--PLAYER VS PLAYER BUTTON-->
-        <Button Style="{DynamicResource PlayerVsPlayerStyle}" Grid.Row="3"
+        <Button Style="{DynamicResource PlayerVsPlayerStyle}" Grid.Row="1"
                 x:Name="PlayerVsPlayer"
                 Content="Kétszemélyes mód"
                 ClickMode="Press"
@@ -298,8 +301,12 @@
                 BorderThickness="5"
                 Width="500"
                 Cursor="Hand" Click="PlayerVsPlayer_Click"
-                />
-        
+                >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
         <!--EXIT BUTTON-->
         <Button Style="{DynamicResource ExitGameStyle}"
                 x:Name="ExitGame"
@@ -317,6 +324,10 @@
                 FontFamily="Bahnschrift Light SemiCondensed"
                 FontSize="20"
                 ClickMode="Press"
-                Cursor="Hand" Click="ExitGame_Click"/>
+                Cursor="Hand" Click="ExitGame_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
