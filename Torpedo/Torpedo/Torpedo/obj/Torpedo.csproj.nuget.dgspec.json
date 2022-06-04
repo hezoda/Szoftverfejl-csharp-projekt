@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {}
+    "C:\\MENTÉS\\Tanulás\\EGYETEM\\6. Félév\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {}
   },
   "projects": {
-    "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {
+    "C:\\MENTÉS\\Tanulás\\EGYETEM\\6. Félév\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
+        "projectUniqueName": "C:\\MENTÉS\\Tanulás\\EGYETEM\\6. Félév\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
         "projectName": "Torpedo",
-        "projectPath": "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
-        "packagesPath": "C:\\Users\\gmrob\\.nuget\\packages\\",
-        "outputPath": "D:\\Programozás\\C#\\Projekt\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\obj\\",
+        "projectPath": "C:\\MENTÉS\\Tanulás\\EGYETEM\\6. Félév\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\Torpedo.csproj",
+        "packagesPath": "C:\\Users\\Bence\\.nuget\\packages\\",
+        "outputPath": "C:\\MENTÉS\\Tanulás\\EGYETEM\\6. Félév\\Szoftverfejl-csharp-projekt\\Torpedo\\Torpedo\\Torpedo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gmrob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bence\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,20 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Prism.Core": {
               "target": "Package",
               "version": "[8.1.97, )"
@@ -63,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
