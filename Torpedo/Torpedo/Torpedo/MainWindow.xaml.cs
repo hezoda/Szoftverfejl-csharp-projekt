@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Torpedo.Repositories;
 using Torpedo.View;
 
 namespace Torpedo
@@ -35,6 +39,19 @@ namespace Torpedo
         private void ExitGame_Click(object sender, RoutedEventArgs e)
         {
             System.Environment.Exit(0);
+        }
+    }
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        public IConfiguration Configuration { get; set; }
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddDbContext<ResultContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("TorpedoDb")));
         }
     }
 }
