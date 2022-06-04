@@ -97,5 +97,20 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1">
+                <DataGrid 
+                    DataContext="{Binding dat}"
+                    Grid.Row="1" Name="table" AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="False">
+                    <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Path=Id}" Width="*"/>
+                    <DataGridTextColumn Header="Első Játékos Neve" IsReadOnly="True" Binding="{Binding Path=ElsoJatekosNeve}" Width="*"/>
+                    <DataGridTextColumn Header="Második Játékos Neve" IsReadOnly="True" Binding="{Binding Path=MasodikJatekosNeve}" Width="*"/>
+                    <DataGridTextColumn Header="Nyertes" IsReadOnly="True" Binding="{Binding Path=Nyertes}" Width="*"/>
+                    <DataGridTextColumn Header="Első Játékos Találatai" IsReadOnly="True" Binding="{Binding Path=ElsoJatekosTalalata}" Width="*"/>
+                    <DataGridTextColumn Header="Második Játékos Találatai" IsReadOnly="True" Binding="{Binding Path=MasodikJatekosTalalata}" Width="*"/>
+                    <DataGridTextColumn Header="Körök Száma" IsReadOnly="True" Binding="{Binding Path=KorokSzama}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+        </Border>
     </Grid>
 </Window>

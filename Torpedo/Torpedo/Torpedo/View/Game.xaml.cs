@@ -4,6 +4,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using Torpedo.Model;
+using Torpedo.Repositories;
 
 namespace Torpedo.View
 {
@@ -146,13 +148,26 @@ namespace Torpedo.View
             if (firstPlayerScoreNumber.Content.ToString() == "15")
             {
                 MessageBox.Show(_firstPlayerName + " megnyerte a játékot!", "A játékak vége.", MessageBoxButton.OK);
+                DbAdd(_firstPlayerName);
                 EndGame();
             }
             else if (secondPlayerScoreNumber.Content.ToString() == "15")
             {
                 MessageBox.Show(_secondPlayerName + " megnyerte a játékot!", "A játéknak vége.", MessageBoxButton.OK);
+                DbAdd(_secondPlayerName);
                 EndGame();
             }
+        }
+        public void DbAdd(string winner)
+        {
+            Result res = new Result();
+            res.ElsoJatekosNeve = _firstPlayerName;
+            res.MasodikJatekosNeve = _secondPlayerName;
+            res.Nyertes = winner;
+            res.ElsoJatekosTalalata = Convert.ToInt32(firstPlayerScoreNumber.Content);
+            res.MasodikJatekosTalalata = Convert.ToInt32(secondPlayerScoreNumber.Content);
+            res.KorokSzama = Convert.ToInt32(roundNumber.Content);
+            ResultRepository.Eredmeny_Hozzaadas(res);
         }
 
         private void EndGame()
