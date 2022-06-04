@@ -333,7 +333,7 @@ namespace Torpedo
             }
             else
             {
-                MessageBox.Show("All ships must be placed!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Rakj le minden hajót a kezdéshez","Hiba!", MessageBoxButton.OK, MessageBoxImage.Error);
 
             }
         }
