@@ -103,6 +103,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <!--EREDMÉNYJELZŐ-->
+            <Border BorderBrush="#defe47" BorderThickness="7"></Border>
             <TextBlock x:Name="ScoreBoard"
                    HorizontalAlignment="Center"
                    TextWrapping="Wrap"
@@ -113,39 +114,24 @@
                    Background="#ff00fe"
                    Foreground="#d1f7ff"
                    VerticalAlignment="Center"
-                   Height="137"
-                   Width="1060"
+                   Height="139"
+                   Width="1046"
                    />
             <!--1ST PLAYER POINTS-->
-            <Border BorderBrush="#defe47" BorderThickness="7">
-                <Label x:Name="FirstPlayerPoints"
+            <Label x:Name="FirstPlayerPoints"
                    FontSize="14"
                 FontFamily="Bahnschrift Light SemiCondensed"
-                Content="1. játékos találata: 0"
-                Margin="32,42,874,61"
+                Content="1. játékos találata:"
+                Margin="39,47,880,72"
                 BorderBrush="#08deea"
                 Background="#0016ee"
                 Foreground="#c4fffe"
                 BorderThickness="3"/>
-            </Border>
             <!--1ST PLAYER ROUNDS-->
-            <Label x:Name="FirstPlayerRounds"
-               Content="1. játékos köreinek száma: 0"
-               HorizontalAlignment="Left"
-               Background="#0016ee"
-               FontFamily="Bahnschrift Light SemiCondensed"
-               FontSize="14"
-               Foreground="#c4fffe"
-               Margin="39,88,0,0"
-               VerticalAlignment="Top"
-               Width="180"
-               BorderBrush="#08deea"
-               BorderThickness="3"
-               Height="32"/>
 
             <!--2ND PLAYER SCORE-->
             <Label x:Name="SecondPlayerPoints"
-               Content="2. játékos találata: 0"
+               Content="2. játékos találata:"
                HorizontalAlignment="Left"
                Background="#0016ee"
                FontFamily="Bahnschrift Light SemiCondensed"
@@ -158,18 +144,6 @@
                RenderTransformOrigin="12.873,-6.601"
                Height="32"
                Width="147"/>
-            <Label x:Name="SecondPlayerRounds"
-               Content="2. játékos köreinek száma: 0"
-               HorizontalAlignment="Left"
-               Margin="785,88,0,0"
-               Grid.Row="0" 
-               Background="#0016ee"
-               FontFamily="Bahnschrift Light SemiCondensed"
-               FontSize="14"
-               Foreground="#c4fffe"
-               VerticalAlignment="Top"
-               BorderBrush="#08deea"
-               BorderThickness="3" Width="180" Height="32"/>
 
             <Label x:Name="VS"
                Content="VS"
@@ -180,6 +154,9 @@
                Margin="0,55,0,0"
                Grid.Row="0"
                VerticalAlignment="Top" RenderTransformOrigin="0.913,0.425" Grid.RowSpan="2"/>
+            <Label x:Name="firstPlayerScoreNumber" FontSize="14" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#defe47" Content="0" HorizontalAlignment="Left" Margin="147,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.474,0.446" Width="27"/>
+            <Label x:Name="roundNumber" FontSize="34" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#defe47" Content="0" HorizontalAlignment="Left" Margin="615,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.474,0.446" Width="45" Height="49"/>
+            <Label x:Name="secondPlayerScoreNumber" FontSize="14" FontFamily="Bahnschrift Light SemiCondensed" Foreground="#defe47" Content="0" HorizontalAlignment="Left" Margin="932,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.474,0.446" Width="27"/>
         </Grid>
 
         <!-- BATTLEFIELD -->
@@ -194,7 +171,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Grid Height="400" Width="400" Name="userBattleField" Grid.Row="1" Grid.Column="1" Background="Transparent" ShowGridLines="True">
+                <Grid Height="400" Width="400" Name="userTable" Grid.Row="1" Grid.Column="1" Background="Transparent" ShowGridLines="True">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
@@ -225,7 +202,7 @@
 
 
             </Grid>
-            <Grid Height="400" Width="400" Name="rightTable" Grid.Row="1" Grid.Column="2" Background="Transparent" ShowGridLines="True">
+            <Grid Height="400" Width="400" Name="enemyTable" Grid.Row="1" Grid.Column="2" Background="Transparent" ShowGridLines="True" PreviewMouseLeftButtonDown="OnGridMouseClick">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -274,18 +251,7 @@
                 Cursor="Hand"
                 RenderTransformOrigin="0.596,0.485"
                 Click="ExitFromGameButton_Click"/>
-
-
-            <Button Style="{DynamicResource OkButtonStyle}" x:Name="OkButton"
-                Content="OK"
-                HorizontalAlignment="Left"
-                Background="#ff00fe"
-                BorderBrush="#defe47"
-                Foreground="#d1f7ff"
-                BorderThickness="3"
-                VerticalAlignment="Top" Height="41" Width="122"
-                FontFamily="Bahnschrift Light SemiCondensed"
-                FontSize="30" Margin="848,57,0,0" Click="OkButton_Click"/>
+            <Label Content="Turn" Name="currentPlayersTurn" HorizontalAlignment="Left" Margin="800,0,0,0" VerticalAlignment="Center"/>
         </Grid>
 
 

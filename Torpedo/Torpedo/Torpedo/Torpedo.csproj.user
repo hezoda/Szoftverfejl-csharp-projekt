@@ -13,9 +13,6 @@
     <Compile Update="View\Game.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\PlayerVsAINameInput.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\PlayerVsPlayerNameInput.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,9 +25,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Game.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PlayerVsAINameInput.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PlayerVsPlayerNameInput.xaml">

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Torpedo.View;
 
 namespace Torpedo
 {
@@ -24,18 +25,9 @@ namespace Torpedo
         {
             InitializeComponent();
         }
-
-        private void PlayerVsAI_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow mw = new MainWindow();
-            View.PlayerVsAINameInput win2 = new View.PlayerVsAINameInput();
-            win2.Show();
-            this.Close();
-
-        }
         private void PlayerVsPlayer_Click(object sender, RoutedEventArgs e)
         {
-            View.PlayerVsPlayerNameInput pvp = new View.PlayerVsPlayerNameInput();
+            PlayerVsPlayerNameInput pvp = new();
             pvp.Show();
             this.Close();
         }

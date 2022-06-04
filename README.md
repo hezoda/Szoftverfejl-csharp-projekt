@@ -18,12 +18,11 @@ A Torpedó kétszemélyes stratégiai táblajáték.  A győzelemhez ki kell lő
 - 5 mező hosszúságú (Carrier)
 - 4 mező hosszúságú (Battleship)
 - 3 mező hosszúságú (Cruiser)
-- 3 mező hosszúságú (Submarine)
-- 2 mező hosszúságú (Destroyer)
+- 2 mező hosszúságú (Submarine)
+- 1 mező hosszúságú (Destroyer)
 
 ### Linkek:
 https://github.com/hezoda/Szoftverfejl-csharp-projekt
-https://trello.com/b/xtxIGAyV/c-szoftverfejleszt%C3%A9s-projekt
 
 ### Fejlesztők: 
 - Török Róbert - torokrobert99
@@ -31,4 +30,4 @@ https://trello.com/b/xtxIGAyV/c-szoftverfejleszt%C3%A9s-projekt
 - Tóth Gergő - hezoda
 
 ### Verziószám:
-0.0.6
+0.1.3
