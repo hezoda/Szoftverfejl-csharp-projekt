@@ -27,7 +27,7 @@ namespace Torpedo
 
         private readonly Grid _firstPlayerGridField;
 
-        //KONSTRUKTOROK
+        //Konstriktorok
 
         //_____________________________________________________________________________________________________________________________________________________
         public PlaceShip(string firstPlayerName, string secondPlayerName)
